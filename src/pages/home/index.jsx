@@ -1,3 +1,4 @@
+import { Game } from "../../container";
 import "./home.styles.scss";
 
 const Home = () => {
@@ -29,7 +30,7 @@ const Home = () => {
       </div>
 
       <div className="right">
-        game goes here
+        <Game />
       </div>
     </div>
   )
