@@ -1,5 +1,5 @@
 import './App.css';
-import { NavBar } from './component';
+import { Footer, NavBar } from './component';
 
 function App() {
   return (
@@ -12,9 +12,7 @@ function App() {
         is quibusdam omnis nesciunt natus totam praesentium provident eligendi, ea repudiandae obcaecati nihil, aspernatur dicta ullam quos, optio eos voluptates facilis. Ducimus hic tempore qui distinctio tenetur provident numquam nemo itaque a quisquam. Praesentium dolores, odio, iure similique quam libero voluptatibus aut vel et, corrupti aspernatur maiores voluptatum ex quia! Accusamus, iusto? Deserunt modi tempore ea nulla accusantium eligendi laboriosam ipsa hic eius? Facilis consequatur incidunt quasi voluptatem inventore iure fugiat rem sed. Veniam ut qui dolorem assumenda earum debitis nisi voluptatum possimus, adipisci perspiciatis dignissimos consequuntur sint quisquam magnam eligendi quos reiciendis! Rem nesciunt voluptatibus explicabo quisquam eveniet porro unde, esse ipsam excepturi quas reprehenderit dolor suscipit, amet numquam aspernatur aliquid magni harum natus odio animi minus veniam facilis! Veniam nam aliquid, exercitationem obcaecati incidunt voluptas iusto assumenda illum corporis consectetur aut quibusdam nostrum rem sed reprehenderit ipsa dolores, quod sunt laudantium culpa expedita excepturi dolor doloribus. Recusandae, blanditiis id hic pariatur repellat possimus quo perferendis fugit modi est. Repellendus voluptate nostrum necessitatibus recusandae error dolorum saepe rem ea excepturi id cupiditate fugiat, eos voluptatibus, numquam quaerat quo voluptatem sunt at consequatur itaque. Atque eius, fuga modi ipsam quos deleniti, ipsa beatae saepe deserunt cumque doloremque, quia tempore dolore provident minima? Dolor voluptatem molestiae nam consequuntur voluptas voluptatibus facilis, illum quam tempore odio eius, blanditiis eos reprehenderit optio rerum consectetur rem natus nulla vitae sed eum alias. Deleniti asperiores cupiditate, at eligendi tempora quisquam est odio fugit quasi eum tenetur nulla obcaecati tempore eos saepe cum facilis perspiciatis sed totam sapiente exercitationem! Praesentium sunt voluptatibus quos reiciendis aperiam hic, facere maiores recusandae.
       </div>
 
-      <div className="footer">
-        footer
-      </div>
+      <Footer />
     </div>
   );
 }

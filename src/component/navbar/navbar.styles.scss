@@ -1,3 +1,122 @@
-.nav {
+ nav {
+  height: 50px;
   border-bottom: 1px solid #1E2D3D;
+  display: flex;
+  align-items: center;
+
+  .logo {
+    width: 250px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    border-right: 1px solid #1E2D3D;
+    font-size: 22px;
+    font-weight: 500;
+
+    @media screen and (max-width: 950px) {
+      border: none;
+    }
+
+    @media screen and (max-width: 655px) {
+      font-size: 18px;
+    }
+  }
+
+  a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    border-right: 1px solid #1E2D3D;
+    color: #607B96;
+    text-decoration: none;
+    opacity: 0.8;
+
+    @media screen and (max-width: 950px) {
+      padding: 0 10px;
+    }
+
+    @media screen and (max-width: 710px) {
+      display: none;
+      border: none;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &.active {
+      opacity: 1;
+      border-bottom: 3px solid #FEA55F;
+      color: #fff;
+
+      @media screen and (max-width: 710px) {
+        border: none;
+      }
+    }
+  }
+
+  .left{
+    margin-left: auto !important;
+    border: none;
+    border-left: 1px solid #1E2D3D;
+  }
+
+  .mobile_nav {
+    margin-left: auto;
+    padding: 0 20px;
+
+    svg {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+
+    div {
+      background-color: #011627;
+      position: absolute;
+      top: 50px;
+      bottom: 40px;
+      right: 0;
+      z-index: 5;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      ul {
+        list-style: none;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+  
+        li {
+          padding: 17px;
+          width: 100%;
+          border-bottom: 1px solid #1E2D3D;
+  
+          a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease-in-out;
+            display: block;
+  
+            &:hover {
+              color: #607B96;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+    
+    @media screen and (min-width: 710px) {
+      display: none;
+      visibility: hidden;
+    }
+  }
 }
+

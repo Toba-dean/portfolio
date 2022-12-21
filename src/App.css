@@ -5,6 +5,7 @@
   grid-template-rows: 55px 1fr 40px;
   width: 97vw;
   height: 92vh;
+  position: relative;
 }
 
 .main_content {
@@ -13,8 +14,4 @@
 
 .main_content::-webkit-scrollbar {
   width: 1px;
-}
-
-.footer {
-  border-top: 1px solid #1E2D3D;
 }
