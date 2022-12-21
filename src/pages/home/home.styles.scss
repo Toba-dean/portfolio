@@ -1,0 +1,59 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+
+  .left {
+    .top {
+      margin-bottom: 80px;
+
+      .intro {
+        color:#E5E9F0;
+      }
+
+      h1 {
+        font-size: 4.5rem;
+        letter-spacing: 1px;
+        color: #E5E9F0;
+      }
+
+      .profession {
+        color: #4D5BCE;
+        font-size: 28px;
+
+        span {
+          margin-right: 7px;
+        }
+      }
+    }
+
+    .bottom {
+      p {
+        padding: 5px;
+      }
+
+      .resume {
+        font-size: 18px;
+        padding-top: 10px;
+
+        a {
+          text-decoration: none;
+          color: #E99287;
+
+          &:hover {
+            opacity: 1;
+            border-bottom: 1px solid #E99287;
+            padding-bottom: 1px;
+          }
+        }
+      }
+    }
+  }
+
+  .right {
+    width: 450px;
+    height: 450px;
+    border: 1px solid red;
+  }
+}
