@@ -1,0 +1,34 @@
+.main_about {
+  display: grid;
+  grid-template-columns: 45px 205px 1fr;
+  position: relative;
+  overflow: hidden;
+
+  .icons {
+    border-right: 1px solid #1E2D3D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 0;
+    position: sticky;
+    
+    svg {
+      width: 25px;
+      height: 25px;
+      margin-bottom: 25px;
+    }
+  }
+
+  .drop_down {
+    border-right: 1px solid #1E2D3D;
+    position: sticky;
+  }
+
+  .content {
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 1px;
+    }
+  }
+}

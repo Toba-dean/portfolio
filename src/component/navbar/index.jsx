@@ -28,6 +28,8 @@ const NavBar = () => {
     }
   ]
 
+  const handleToggle = () => setToggle(false)
+
   return (
     <nav>
       <p className="logo">_dean</p>
@@ -45,26 +47,22 @@ const NavBar = () => {
       }
 
       <div className="mobile_nav">
-        {!toggle && <HiMenuAlt4 onClick={() => setToggle(true)} />}
-
-        {
-          toggle && (
-            <>
-              <HiX onClick={() => setToggle(false)} />
-              <div>
-                <ul>
-                  {
-                    navData.map((item, idx) => (
-                      <li key={idx}>
-                        <NavLink to={item.path}>{item.name}</NavLink>
-                      </li>
-                    ))
-                  }
-                </ul>
-              </div>
-            </>
-          )
-        }
+        {toggle ? (
+          <>
+            <HiX onClick={() => setToggle(false)} />
+            <div>
+              <ul>
+                {
+                  navData.map((item, idx) => (
+                    <li key={idx} onClick={handleToggle}>
+                      <NavLink to={item.path}>{item.name}</NavLink>
+                    </li>
+                  ))
+                }
+              </ul>
+            </div>
+          </>
+        ) : <HiMenuAlt4 onClick={() => setToggle(true)} />}
       </div>
     </nav>
   )
