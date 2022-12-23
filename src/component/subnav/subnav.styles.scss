@@ -1,0 +1,51 @@
+.sub_menu {
+  cursor: pointer;
+  color:  #607B96;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 10px;
+
+  .sub_content {
+    display: flex;
+    align-items: center;
+    opacity: .75;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    svg {
+      margin-top: 0;
+    }
+  }
+
+  .active {
+    color: #fff;
+    opacity: 1;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    margin-top: 5px;
+  }
+}
+
+.dropdownlink {
+  display: flex;
+  align-items: center;
+  color: #607B96;
+  text-decoration: none;
+  margin-left: 37px;
+  margin-bottom: 10px;
+
+  svg {
+    margin-right: 5px;
+  }
+
+  &.active {
+    color: #fff;
+  }
+}
