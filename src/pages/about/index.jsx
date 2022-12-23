@@ -32,7 +32,8 @@ const About = () => {
       <div className="drop_down">
         <div className="top">
           <AiFillCaretDown className="icon" />
-          <p>personal-info</p>
+          <p className="desk_text">personal-info</p>
+          <p className="mobile_text">_about.me</p>
         </div>
 
         <div className="drop_down-link">

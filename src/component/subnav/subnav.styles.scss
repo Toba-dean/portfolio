@@ -31,6 +31,16 @@
     margin-right: 5px;
     margin-top: 5px;
   }
+
+  @media screen and (max-width: 650px) {
+    background-color: #1E2D3D;
+    height: 30px;
+    padding: 20px;
+    margin: 0;
+    margin-bottom: 5px;
+    color: #fff;
+    opacity: 1;
+  }
 }
 
 .dropdownlink {
