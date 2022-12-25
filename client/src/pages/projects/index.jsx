@@ -1,14 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { DiReact } from "react-icons/di";
 import { TbBrandJavascript, TbBrandNextjs } from "react-icons/tb";
-import { AiFillHome } from "react-icons/ai";
+import { AiFillHome, AiFillEye, AiFillGithub } from "react-icons/ai";
 
 import { NavTop } from "../../component";
 import "./project.styles.scss";
+import { urlFor, client } from "../../client";
 
 const Projects = () => {
 
   const [activeFilter, setActiveFilter] = useState('All');
+  const [works, setWorks] = useState([]);
+  const [filterWork, setFilterWork] = useState([]);
 
   const category = [
     {
@@ -29,9 +32,30 @@ const Projects = () => {
     }
   ]
 
+  useEffect(() => {
+    const query = '*[_type == "works"]';
+
+    client.fetch(query)
+      .then(data => {
+        setWorks(data);
+        setFilterWork(data);
+      })
+  }, [])
+
+  console.log(works);
+
   const handleWorkFilter = item => {
     setActiveFilter(item);
+
+    setTimeout(() => {
+      if (item === 'All') {
+        setFilterWork(works);
+      } else {
+        setFilterWork(works.filter(work => work.tags.includes(item)));
+      }
+    }, 500)
   }
+
 
   return (
     <div className="project">
@@ -55,9 +79,46 @@ const Projects = () => {
       </div>
 
       <div className="right">
-        <h1>{activeFilter} projects</h1>
+        <h1>{activeFilter} Projects</h1>
+
+        <div className="works">
+          {
+            filterWork.map((work, idx) => (
+              <div className="work_item" key={idx}>
+                <div className='work_img'>
+                  <img src={urlFor(work.imgUrl)} alt={work.name} />
+
+                  <div className="work_hover">
+                    <a href={work.projectLink} target="_blank" rel="noreferrer">
+                      <div className="work_flex">
+                        <AiFillEye />
+                      </div>
+                    </a>
+
+                    <a href={work.codeLink} target="_blank" rel="noreferrer">
+                      <div className="work_flex">
+                        <AiFillGithub />
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div className="work_content">
+                  <h4>{work.title}</h4>
+                  <p className="desc">{work.description}</p>
+
+                  <div className="work_tag">
+                    <p>{work.tags[0]}</p>
+                  </div>
+                </div>
+
+
+              </div>
+            ))
+          }
+        </div>
       </div>
-    </div>
+    </div >
   )
 }
 
