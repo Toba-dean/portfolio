@@ -1,13 +1,12 @@
 import { AiOutlineProfile } from "react-icons/ai";
 import { SlGameController } from "react-icons/sl";
 import { GiNotebook } from "react-icons/gi"
-import { AiFillCaretDown } from "react-icons/ai";
 import { RxDotFilled } from 'react-icons/rx';
 import { Routes, Route, useLocation } from "react-router-dom";
 
 import "./about.styles.scss";
 import { NavData } from "./NavData.data";
-import { SubNav } from "../../component";
+import { NavTop, SubNav } from "../../component";
 import { Personal, Formal, NonFormal, Skills, Interests } from "../../container";
 
 const About = () => {
@@ -30,11 +29,7 @@ const About = () => {
       </div>
 
       <div className="drop_down">
-        <div className="top">
-          <AiFillCaretDown className="icon" />
-          <p className="desk_text">personal-info</p>
-          <p className="mobile_text">_about.me</p>
-        </div>
+        <NavTop path="personal-info" mobilePath="_about.me" />
 
         <div className="drop_down-link">
           {

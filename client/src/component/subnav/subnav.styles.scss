@@ -58,4 +58,8 @@
   &.active {
     color: #fff;
   }
+
+  @media screen and (max-width: 650px) {
+    padding-left: 25px;
+  }
 }

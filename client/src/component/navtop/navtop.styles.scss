@@ -1,0 +1,39 @@
+.top_nav {
+  display: flex;
+  align-items: center;
+  height: 42px;
+  border-bottom: 1px solid #1E2D3D;
+  padding: 0 15px;
+  color: #FFF;
+
+  svg {
+    margin-top: 5px;
+    margin-right: 7px;
+
+    @media screen and (max-width: 650px) {
+      display: none;
+    }  
+  }
+
+  .mobile_text {
+    display: none;
+
+    @media screen and (max-width: 650px) {
+      display: block;
+      font-size: 18px;
+      font-weight: 600;
+      padding: 10px 15px;
+    }        
+  }
+
+  .desk_text {
+    @media screen and (max-width: 650px) {
+      display: none;
+    }  
+  }
+
+  @media screen and (max-width: 650px) {
+    border: none;
+    height: 65px;
+  }
+}
