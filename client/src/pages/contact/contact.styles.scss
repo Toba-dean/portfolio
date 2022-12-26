@@ -1,0 +1,24 @@
+.contact {
+  display: grid;
+  grid-template-columns: 250px repeat(2, 1fr);
+  position: relative;
+  border-right: 1px solid #1E2D3D;
+
+  // &::before {
+  //   content: " ";
+  //   position: absolute;
+  //   width: 19.5px;
+  //   height: 7px;
+  //   top: 3px;
+  //   right: -23px;
+  //   background-color: #607B96;
+  // }
+
+  .contact_info {
+    border-right: 1px solid #1E2D3D;
+  }
+
+  .contact_form {
+    border-right: 1px solid #1E2D3D;
+  }
+}
