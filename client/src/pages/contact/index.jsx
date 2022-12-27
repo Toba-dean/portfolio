@@ -1,7 +1,7 @@
+import { useState } from "react";
 import { IoMdMail } from "react-icons/io";
 import { ImPhone } from "react-icons/im";
-
-import { useState } from "react";
+import { AiFillCaretDown, AiFillCaretRight } from "react-icons/ai";
 
 import { NavTop } from "../../component";
 import "./contact.styles.scss";
@@ -15,6 +15,9 @@ const Contact = () => {
     message: ""
   }
   const [data, setData] = useState(userData);
+  const [drop, setDrop] = useState(false);
+
+  const handleToggle = () => setDrop(drop => !drop)
 
   const handleChangeInput = ({ target }) => {
     const { name, value } = target;
@@ -30,7 +33,14 @@ const Contact = () => {
           <div className="desktop">
             <p>
               <IoMdMail />
-              <span>tobaogundimu@gmail.com</span>
+              <span>
+                <a
+                  href="mailto:tobaogundimu@gmail.com"
+                  style={{ color: "#607b96", textDecoration: "none" }}
+                >
+                  tobaogundimu@gmail.com
+                </a>
+              </span>
             </p>
             <p>
               <ImPhone />
@@ -38,7 +48,34 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="mobile"></div>
+          <div className="mobile">
+            <div className="parentNav" onClick={handleToggle}>
+              {drop ? <AiFillCaretDown /> : <AiFillCaretRight />}
+              <span>contact.me</span>
+            </div>
+
+            {
+              drop && (
+                <div className="drop">
+                  <p>
+                    <IoMdMail />
+                    <span>
+                      <a
+                        href="mailto:tobaogundimu@gmail.com"
+                        style={{ color: "#607b96", textDecoration: "none" }}
+                      >
+                        tobaogundimu@gmail.com
+                      </a>
+                    </span>
+                  </p>
+                  <p>
+                    <ImPhone />
+                    +2349054217175
+                  </p>
+                </div>
+              )
+            }
+          </div>
         </div>
       </div>
 
