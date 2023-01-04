@@ -1,3 +1,3 @@
-import Works from "./works"
+import Works from "./works";
 
 export const schemaTypes = [Works]

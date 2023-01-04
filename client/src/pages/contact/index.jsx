@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { IoMdMail } from "react-icons/io";
 import { ImPhone } from "react-icons/im";
 import { AiFillCaretDown, AiFillCaretRight } from "react-icons/ai";
+import { MdOutlineLocationOn } from "react-icons/md";
+import emailjs from '@emailjs/browser';
 
-import { NavTop } from "../../component";
+import { NavTop, Sent } from "../../component";
 import "./contact.styles.scss";
 
 const Contact = () => {
@@ -16,13 +18,38 @@ const Contact = () => {
   }
   const [data, setData] = useState(userData);
   const [drop, setDrop] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const form = useRef()
 
-  const handleToggle = () => setDrop(drop => !drop)
+  const handleToggle = () => setDrop(drop => !drop);
 
   const handleChangeInput = ({ target }) => {
     const { name, value } = target;
     setData({ ...data, [name]: value });
   };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      'service_71sylbg',
+      'template_h1hqbok',
+      form.current,
+      '8zWqn6oenvTFH5-3n'
+    )
+      .then(result => {
+        setLoading(true)
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+
+    form.current.reset();
+  };
+
+  const handleClick = () => {
+    setLoading(false)
+  }
 
   return (
     <div className="contact">
@@ -46,6 +73,18 @@ const Contact = () => {
               <ImPhone />
               +2349054217175
             </p>
+          </div>
+
+          <div className="location">
+            <div className="loc">
+            <AiFillCaretDown className="icon" />
+              Location
+            </div>
+
+            <div className="place">
+              <MdOutlineLocationOn />
+              Lagos - Nigeria
+            </div>
           </div>
 
           <div className="mobile">
@@ -79,42 +118,48 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className="contact_form">
-        <div className="form">
-          <div className="input_text">
-            <label htmlFor="name">_name:</label>
-            <input
-              type="text"
-              name="name"
-              value={data.name}
-              onChange={handleChangeInput}
-            />
-          </div>
+      {
+        !loading ? (
+          <form className="contact_form" ref={form} onSubmit={handleSubmit}>
+            <div className="form">
+              <div className="input_text">
+                <label htmlFor="name">_name:</label>
+                <input
+                  type="text"
+                  name="name"
+                  value={data.name}
+                  onChange={handleChangeInput}
+                />
+              </div>
 
-          <div className="input_text">
-            <label htmlFor="email">_email:</label>
-            <input
-              type="email"
-              name="email"
-              value={data.email}
-              onChange={handleChangeInput}
-            />
-          </div>
+              <div className="input_text">
+                <label htmlFor="email">_email:</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={data.email}
+                  onChange={handleChangeInput}
+                />
+              </div>
 
-          <div className="textarea">
-            <label htmlFor="">_message:</label>
-            <textarea
-              name="message"
-              id="msg"
-              placeholder="send a message.."
-              value={data.message}
-              onChange={handleChangeInput}
-            />
-          </div>
+              <div className="textarea">
+                <label htmlFor="">_message:</label>
+                <textarea
+                  name="message"
+                  id="msg"
+                  placeholder="send a message.."
+                  value={data.message}
+                  onChange={handleChangeInput}
+                />
+              </div>
 
-          <button>submit-message</button>
-        </div>
-      </div>
+              <button type="submit">send-message</button>
+            </div>
+          </form>
+        ) : (
+          <Sent handleClick={handleClick} />
+        )
+      }
 
       <div className="contact_val">
         <p>

@@ -4,4 +4,5 @@ export { default as Tile } from "./game/Tile.game";
 export { default as Cell } from "./game/Cell.game";
 export { default as GameOverlay } from "./game/GameOverlay.game";
 export { default as SubNav } from "./subnav";
-export { default as NavTop } from "./navtop"
+export { default as NavTop } from "./navtop";
+export { default as Sent } from "./sent";

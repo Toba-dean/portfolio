@@ -27,7 +27,7 @@ const Projects = () => {
       icon: <DiReact />
     },
     {
-      title: "Next Js",
+      title: "Next JS",
       icon: <TbBrandNextjs />
     }
   ]

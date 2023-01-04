@@ -1,0 +1,31 @@
+.sent {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  text-align: center;
+
+  h2 {
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  .button {
+    margin-top: 25px;
+    padding: 15px 20px;
+    background-color:#1C2B3A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    color: white;
+    cursor: pointer;
+  }
+
+  @media screen and (min-width: 850px) {
+    border-right: 1px solid #1E2D3D;
+  }
+}
