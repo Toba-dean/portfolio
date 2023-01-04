@@ -1,0 +1,15 @@
+.skills {
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+
+    &.second {
+      margin-top: 20px;
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin-left: 20px;
+  }
+}

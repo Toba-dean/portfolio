@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { DiReact } from "react-icons/di";
 import { TbBrandJavascript, TbBrandNextjs } from "react-icons/tb";
-import { AiFillHome, AiFillEye, AiFillGithub } from "react-icons/ai";
+import { AiFillHome } from "react-icons/ai";
 
-import { NavTop } from "../../component";
+import { FilterWork, NavTop } from "../../component";
 import "./project.styles.scss";
-import { urlFor, client } from "../../client";
+import { client } from "../../client";
 
 const Projects = () => {
 
@@ -41,8 +41,6 @@ const Projects = () => {
         setFilterWork(data);
       })
   }, [])
-
-  console.log(works);
 
   const handleWorkFilter = item => {
     setActiveFilter(item);
@@ -84,36 +82,7 @@ const Projects = () => {
         <div className="works">
           {
             filterWork.map((work, idx) => (
-              <div className="work_item" key={idx}>
-                <div className='work_img'>
-                  <img src={urlFor(work.imgUrl)} alt={work.name} />
-
-                  <div className="work_hover">
-                    <a href={work.projectLink} target="_blank" rel="noreferrer">
-                      <div className="work_flex">
-                        <AiFillEye />
-                      </div>
-                    </a>
-
-                    <a href={work.codeLink} target="_blank" rel="noreferrer">
-                      <div className="work_flex">
-                        <AiFillGithub />
-                      </div>
-                    </a>
-                  </div>
-                </div>
-
-                <div className="work_content">
-                  <h4>{work.title}</h4>
-                  <p className="desc">{work.description}</p>
-
-                  <div className="work_tag">
-                    <p>{work.tags[0]}</p>
-                  </div>
-                </div>
-
-
-              </div>
+              <FilterWork key={idx} work={work} />
             ))
           }
         </div>

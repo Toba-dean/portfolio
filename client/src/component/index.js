@@ -6,3 +6,7 @@ export { default as GameOverlay } from "./game/GameOverlay.game";
 export { default as SubNav } from "./subnav";
 export { default as NavTop } from "./navtop";
 export { default as Sent } from "./sent";
+export { default as ContactMenu } from "./contactmenu";
+export { default as ContactRight } from "./contactvalue";
+export { default as ContactForm } from "./contactform";
+export { default as FilterWork } from "./filterwork";
