@@ -1,6 +1,9 @@
 import { AiFillFolder } from "react-icons/ai";
 import { FiChevronRight, FiChevronDown } from "react-icons/fi";
 import { BsFilePersonFill } from "react-icons/bs";
+import { HiCode } from "react-icons/hi";
+import { GiNotebook } from "react-icons/gi";
+import { FaGamepad } from "react-icons/fa"
 
 export const NavData = [
   {
@@ -22,7 +25,7 @@ export const NavData = [
         check: false,
         title: 'skills',
         path: '/about/skills',
-        icon: <BsFilePersonFill />,
+        icon: <HiCode />,
         slug: "// skills"
       },
     ]
@@ -39,14 +42,14 @@ export const NavData = [
         check: false,
         title: 'formal',
         path: '/about/formal',
-        icon: <AiFillFolder />,
+        icon: <GiNotebook />,
         slug: "// formal"
       },
       {
         check: false,
         title: 'non-formal',
         path: '/about/non-formal',
-        icon: <AiFillFolder />,
+        icon: <GiNotebook />,
         slug: "// non-formal"
       },
     ]
@@ -63,7 +66,7 @@ export const NavData = [
         check: false,
         title: 'interest',
         path: '/about/interest',
-        icon: <AiFillFolder />,
+        icon: <FaGamepad />,
         slug: "// interest"
       }
     ]

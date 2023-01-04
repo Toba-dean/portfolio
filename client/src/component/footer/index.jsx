@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import { AiFillGithub, AiOutlineTwitter, AiFillLinkedin } from "react-icons/ai"
 
 import "./footer.styles.scss";
@@ -9,11 +8,11 @@ const Footer = () => {
   const footerData = [
     {
       icon: <AiFillGithub />,
-      path: '/'
+      path: 'https://github.com/Toba-dean'
     },
     {
       icon: <AiOutlineTwitter />,
-      path: '/'
+      path: 'https://twitter.com/code_DE4N'
     },
     {
       icon: <AiFillLinkedin />,
@@ -30,15 +29,15 @@ const Footer = () => {
 
     
         {
-          footerData.map(({ icon, path, last }, id) => (
-            <NavLink
-              to={path}
-              key={id}
+          footerData.map(({ icon, path, last }, idx) => (
+            <a
+              href={path}
+              key={idx}
               target="_blank"
               className={last && last}
             >
               {icon}
-            </NavLink>
+            </a>
           ))
         }
 
