@@ -34,6 +34,7 @@ const Footer = () => {
               href={path}
               key={idx}
               target="_blank"
+              rel="noreferrer"
               className={last && last}
             >
               {icon}
