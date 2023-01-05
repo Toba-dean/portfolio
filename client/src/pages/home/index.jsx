@@ -1,7 +1,14 @@
+import { useEffect } from "react";
+
 import { Game } from "../../container";
 import "./home.styles.scss";
 
 const Home = () => {
+
+  useEffect(() => {
+    document.title = "dean - home"
+  });
+
   return (
     <div className="main_home">
       <div className="left">

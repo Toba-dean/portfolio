@@ -1,8 +1,24 @@
-import React from 'react'
+import "./formal.styles.scss";
 
 const Formal = () => {
   return (
-    <div>Formal</div>
+    <div className="formal">
+      <div className="diploma">
+        <p>
+          <strong>University Of Lagos</strong> <small>(2015 - 2016)</small> <br />
+          <small>Lagos, Nigeria.</small>
+        </p>
+
+        <p className="honors">JUPEB Diploma</p>
+      </div>
+      <div className="college">
+        <p>
+          <strong>University Of Lagos</strong> <small>(2016 - 2021)</small> <br />
+          <small>Lagos, Nigeria.</small>
+        </p>
+        <p className="honors">BSc. Geophysics</p>
+      </div>
+    </div>
   )
 }
 

@@ -3,6 +3,7 @@ import { SlGameController } from "react-icons/sl";
 import { GiNotebook } from "react-icons/gi"
 import { RxDotFilled } from 'react-icons/rx';
 import { Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 import "./about.styles.scss";
 import { NavData } from "./NavData.data";
@@ -10,6 +11,10 @@ import { NavTop, SubNav } from "../../component";
 import { Personal, Formal, NonFormal, Skills, Interests } from "../../container";
 
 const About = () => {
+
+  useEffect(() => {
+    document.title = "dean - about"
+  });
 
   const { pathname } = useLocation();
   let side_nav = []

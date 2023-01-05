@@ -33,6 +33,10 @@ const Projects = () => {
   ]
 
   useEffect(() => {
+    document.title = "dean - project"
+  });
+
+  useEffect(() => {
     const query = '*[_type == "works"]';
 
     client.fetch(query)

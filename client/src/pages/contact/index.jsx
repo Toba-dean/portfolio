@@ -1,10 +1,14 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import emailjs from '@emailjs/browser';
 
 import { ContactForm, ContactMenu, ContactRight, NavTop, Sent } from "../../component";
 import "./contact.styles.scss";
 
 const Contact = () => {
+
+  useEffect(() => {
+    document.title = "dean - contact"
+  });
 
   const userData = {
     name: "",
