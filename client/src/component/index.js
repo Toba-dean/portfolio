@@ -10,3 +10,4 @@ export { default as ContactMenu } from "./contactmenu";
 export { default as ContactRight } from "./contactvalue";
 export { default as ContactForm } from "./contactform";
 export { default as FilterWork } from "./filterwork";
+export { default as Code } from "./code";

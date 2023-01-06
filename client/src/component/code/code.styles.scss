@@ -1,0 +1,33 @@
+.code {
+  .code1 {
+    margin: 30px 0;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #1E2D3D;
+
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .image {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+    }
+
+    .main_code {
+      margin-top: 10px;
+      width: 100%;
+      border: 1px solid #1E2D3D;
+      border-radius: 15px;
+      background: #011221;
+      padding: 20px;
+    }
+  }
+}

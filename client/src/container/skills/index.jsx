@@ -3,6 +3,9 @@ import "./skills.styles.scss";
 const Skills = () => {
   return (
     <div className="skills">
+
+      <p className="personal_head">{"//skills"} <span>/ bio</span></p>
+
       <h1>Technologies I Use:</h1>
 
       <ul>

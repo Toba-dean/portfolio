@@ -18,15 +18,13 @@ export const NavData = [
         check: false,
         title: 'personal',
         path: '/about/personal',
-        icon: <BsFilePersonFill />,
-        slug: "// personal"
+        icon: <BsFilePersonFill />
       },
       {
         check: false,
         title: 'skills',
         path: '/about/skills',
-        icon: <HiCode />,
-        slug: "// skills"
+        icon: <HiCode />
       },
     ]
   },
@@ -42,8 +40,7 @@ export const NavData = [
         check: false,
         title: 'formal',
         path: '/about/formal',
-        icon: <GiNotebook />,
-        slug: "// formal"
+        icon: <GiNotebook />
       },
       {
         check: false,
@@ -64,10 +61,9 @@ export const NavData = [
     subNav: [
       {
         check: false,
-        title: 'interest',
-        path: '/about/interest',
-        icon: <FaGamepad />,
-        slug: "// interest"
+        title: 'hobbies',
+        path: '/about/hobbies',
+        icon: <FaGamepad />
       }
     ]
   }

@@ -1,4 +1,4 @@
-.skills {
+.interest {
   .personal_head {
     display: none;
     margin-bottom: 10px;
@@ -13,17 +13,15 @@
     }
   }
 
-  h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-
-    &.second {
-      margin-top: 20px;
+  .content {
+    p {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 15px;
     }
-  }
 
-  ul {
-    list-style: none;
-    margin-left: 20px;
+    ul {
+      margin-left: 30px;
+    }
   }
 }

@@ -3,6 +3,8 @@ import "./nonformal.styles.scss";
 const NonFormal = () => {
   return (
     <div className="non_formal">
+      <p className="personal_head">{"//non-formal"} <span>/ bio</span></p>
+
       <div className="harvard">
         <h1>EDx</h1>
         <p>

@@ -1,4 +1,18 @@
 .formal {
+  .personal_head {
+    display: none;
+    margin-bottom: 10px;
+    color: #fff;
+
+    span {
+      color: #607B96;
+    }
+
+    @media screen and (max-width: 650px) {
+      display: block;
+    }
+  }
+  
   .diploma {
     margin: 20px 0;
 
