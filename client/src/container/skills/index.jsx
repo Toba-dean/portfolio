@@ -11,9 +11,10 @@ const Skills = () => {
       <ul>
         <li>- HTML, CSS.</li>
         <li>- Javascript (ES6+).</li>
-        <li>- React, Next Js, Redux.</li>
+        <li>- React, Next Js.</li>
         <li>- PHP.</li>
-        <li>- Firebase, Node, and Express.</li>
+        <li>- Node, Express.</li>
+        <li>- Firebase, Mongo DB.</li>
         <li>- MySQL.</li>
       </ul>
 
