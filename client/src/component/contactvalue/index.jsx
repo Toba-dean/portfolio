@@ -31,7 +31,7 @@ const ContactRight = ({ data }) => {
       </p>
 
       <p>
-        <span style={{ fontSize: '18px', fontWeight: 450 }}>7</span> <span style={{ color: "#607B96", marginLeft: "55px" }}>data:</span> <span style={{ color: "#FEA55F" }}>"{date.toDateString()}"</span>
+        <span style={{ fontSize: '18px', fontWeight: 450 }}>7</span> <span style={{ color: "#607B96", marginLeft: "55px" }}>date:</span> <span style={{ color: "#FEA55F" }}>"{date.toDateString()}"</span>
       </p>
 
       <p>
